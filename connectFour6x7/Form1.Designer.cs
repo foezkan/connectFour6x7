@@ -30,7 +30,6 @@
         {
             this.button10 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.lblSecim = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -71,7 +70,6 @@
             this.button48 = new System.Windows.Forms.Button();
             this.button49 = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
-            this.btnFarbe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button10
@@ -92,16 +90,6 @@
             this.btn1.TabIndex = 0;
             this.btn1.Text = "btn1";
             this.btn1.UseVisualStyleBackColor = true;
-            // 
-            // lblSecim
-            // 
-            this.lblSecim.AutoSize = true;
-            this.lblSecim.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblSecim.Location = new System.Drawing.Point(518, 17);
-            this.lblSecim.Name = "lblSecim";
-            this.lblSecim.Size = new System.Drawing.Size(24, 13);
-            this.lblSecim.TabIndex = 1;
-            this.lblSecim.Text = "Rot";
             // 
             // button9
             // 
@@ -463,20 +451,9 @@
             this.btn6.Text = "btn6";
             this.btn6.UseVisualStyleBackColor = true;
             // 
-            // btnFarbe
-            // 
-            this.btnFarbe.BackColor = System.Drawing.Color.Red;
-            this.btnFarbe.Location = new System.Drawing.Point(509, 59);
-            this.btnFarbe.Name = "btnFarbe";
-            this.btnFarbe.Size = new System.Drawing.Size(75, 49);
-            this.btnFarbe.TabIndex = 42;
-            this.btnFarbe.Text = "btnFarbe";
-            this.btnFarbe.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(596, 325);
-            this.Controls.Add(this.btnFarbe);
             this.Controls.Add(this.button45);
             this.Controls.Add(this.button46);
             this.Controls.Add(this.button47);
@@ -517,12 +494,10 @@
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.lblSecim);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.button10);
             this.Name = "Form1";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -539,7 +514,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Label lblSecim;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
@@ -580,7 +554,6 @@
         private System.Windows.Forms.Button button48;
         private System.Windows.Forms.Button button49;
         private System.Windows.Forms.Button btn6;
-        private System.Windows.Forms.Button btnFarbe;
     }
 }
 
