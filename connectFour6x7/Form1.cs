@@ -4,16 +4,19 @@ using System.Windows.Forms;
 
 namespace connectFour6x7
 {
-
+    
     public partial class Form1 : Form
     {
-       int schalter = 0;
+        int schalter = 0;
+
 
         public Form1()
         {
             InitializeComponent();
         }
-        void dran ()
+
+
+        void dran()
         {
             if (schalter % 2 == 0)
             {
@@ -38,9 +41,23 @@ namespace connectFour6x7
             }
         }
 
+        void gewin()
+        {
+            if (btn12.BackColor == Color.Red && btn11.BackColor == Color.Red && btn10.BackColor == Color.Red && btn9.BackColor == Color.Red)
+                {
+                MessageBox.Show("Probe");
+                }
+
+            else
+            {
+                 
+            }
+        }
+
         private void button9_Click(object sender, EventArgs e)
         {
             dran();
+            gewin();
             if (btn12.BackColor != Color.Red && btn12.BackColor != Color.Yellow)
             {
                 btn12.BackColor = btnDran.BackColor;
@@ -68,7 +85,7 @@ namespace connectFour6x7
                 button9.BackColor = Color.Gray;
                 button9.Text = "voll";
             }
-           wechseln();
+            wechseln();
         }
 
         private void button10_Click_1(object sender, EventArgs e)
@@ -76,11 +93,11 @@ namespace connectFour6x7
 
             dran();
 
-            if (btn6.BackColor!= Color.Red && btn6.BackColor!=Color.Yellow) 
-            { 
-            btn6.BackColor = btnDran.BackColor;
+            if (btn6.BackColor != Color.Red && btn6.BackColor != Color.Yellow)
+            {
+                btn6.BackColor = btnDran.BackColor;
             }
-            else if (btn5.BackColor != Color.Red && btn5.BackColor != Color.Yellow) 
+            else if (btn5.BackColor != Color.Red && btn5.BackColor != Color.Yellow)
             {
                 btn5.BackColor = btnDran.BackColor;
             }
@@ -238,7 +255,13 @@ namespace connectFour6x7
                 button15.BackColor = Color.Gray;
                 button15.Text = "voll";
             }
+
             wechseln();
+
         }
+
+
     }
+
 }
+
