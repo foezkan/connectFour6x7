@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace connectFour6x7
@@ -13,6 +14,7 @@ namespace connectFour6x7
         public Form1()
         {
             InitializeComponent();
+            
         }
 
 
@@ -43,52 +45,41 @@ namespace connectFour6x7
 
         void gewin()
         {
-            if (btn12.BackColor == Color.Red && btn11.BackColor == Color.Red && btn10.BackColor == Color.Red && btn9.BackColor == Color.Red)
+            if ( (btn6.BackColor == Color.Red && btn5.BackColor == Color.Red && btn4.BackColor == Color.Red && btn3.BackColor == Color.Red) ||
+                 (btn5.BackColor == Color.Red && btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red) ||
+                 (btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red && btn1.BackColor == Color.Red) ||
+                 (btn12.BackColor == Color.Red && btn11.BackColor == Color.Red && btn10.BackColor == Color.Red && btn9.BackColor == Color.Red))
                 {
+
+                // Weiter
                 MessageBox.Show("Probe");
+
+                for (int i = 1; i <= 42; i++)
+                {
+                    Button btn = Controls.Find("btn" + i, true).FirstOrDefault() as Button;
+                    if (btn != null)
+                    {
+                        btn.BackColor = Color.White;
+                                            
+                    }
                 }
 
-            else
-            {
-                 
+                for (int i = 37; i <= 42; i++)
+                {
+                    Button btn = Controls.Find("btn" + i, true).FirstOrDefault() as Button;
+                    if (btn != null)
+                    {
+                       btn.Text = "+";
+                       btn.Enabled = true;
+                    }
+                }
+
             }
+            
+            
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            dran();
-            gewin();
-            if (btn12.BackColor != Color.Red && btn12.BackColor != Color.Yellow)
-            {
-                btn12.BackColor = btnDran.BackColor;
-            }
-            else if (btn11.BackColor != Color.Red && btn11.BackColor != Color.Yellow)
-            {
-                btn11.BackColor = btnDran.BackColor;
-            }
-            else if (btn10.BackColor != Color.Red && btn10.BackColor != Color.Yellow)
-            {
-                btn10.BackColor = btnDran.BackColor;
-            }
-            else if (btn9.BackColor != Color.Red && btn9.BackColor != Color.Yellow)
-            {
-                btn9.BackColor = btnDran.BackColor;
-            }
-            else if (btn8.BackColor != Color.Red && btn8.BackColor != Color.Yellow)
-            {
-                btn8.BackColor = btnDran.BackColor;
-            }
-            else if (btn7.BackColor != Color.Red && btn7.BackColor != Color.Yellow)
-            {
-                btn7.BackColor = btnDran.BackColor;
-                button9.Enabled = false;
-                button9.BackColor = Color.Gray;
-                button9.Text = "voll";
-            }
-            wechseln();
-        }
-
-        private void button10_Click_1(object sender, EventArgs e)
+        private void btn37_Click_1(object sender, EventArgs e)
         {
 
             dran();
@@ -119,14 +110,52 @@ namespace connectFour6x7
             else if (btn1.BackColor != Color.Red && btn1.BackColor != Color.Yellow)
             {
                 btn1.BackColor = btnDran.BackColor;
-                button10.Enabled = false;
-                button10.BackColor = Color.Gray;
-                button10.Text = "voll";
+                btn37.Enabled = false;
+                btn37.BackColor = Color.Gray;
+                btn37.Text = "voll";
             }
+            gewin();
             wechseln();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void btn38_Click(object sender, EventArgs e)
+        {
+            dran();
+            
+            if (btn12.BackColor != Color.Red && btn12.BackColor != Color.Yellow)
+            {
+                btn12.BackColor = btnDran.BackColor;
+            }
+            else if (btn11.BackColor != Color.Red && btn11.BackColor != Color.Yellow)
+            {
+                btn11.BackColor = btnDran.BackColor;
+            }
+            else if (btn10.BackColor != Color.Red && btn10.BackColor != Color.Yellow)
+            {
+                btn10.BackColor = btnDran.BackColor;
+            }
+            else if (btn9.BackColor != Color.Red && btn9.BackColor != Color.Yellow)
+            {
+                btn9.BackColor = btnDran.BackColor;
+            }
+            else if (btn8.BackColor != Color.Red && btn8.BackColor != Color.Yellow)
+            {
+                btn8.BackColor = btnDran.BackColor;
+            }
+            else if (btn7.BackColor != Color.Red && btn7.BackColor != Color.Yellow)
+            {
+                btn7.BackColor = btnDran.BackColor;
+                btn38.Enabled = false;
+                btn38.BackColor = Color.Gray;
+                btn38.Text = "voll";
+            }
+            gewin();
+            wechseln();
+        }
+
+       
+
+        private void btn39_Click(object sender, EventArgs e)
         {
             dran();
             if (btn18.BackColor != Color.Red && btn18.BackColor != Color.Yellow)
@@ -152,14 +181,14 @@ namespace connectFour6x7
             else if (btn13.BackColor != Color.Red && btn13.BackColor != Color.Yellow)
             {
                 btn13.BackColor = btnDran.BackColor;
-                button12.Enabled = false;
-                button12.BackColor = Color.Gray;
-                button12.Text = "voll";
+                btn39.Enabled = false;
+                btn39.BackColor = Color.Gray;
+                btn39.Text = "voll";
             }
             wechseln();
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void btn40_Click(object sender, EventArgs e)
         {
             dran();
             if (btn24.BackColor != Color.Red && btn24.BackColor != Color.Yellow)
@@ -185,14 +214,14 @@ namespace connectFour6x7
             else if (btn19.BackColor != Color.Red && btn19.BackColor != Color.Yellow)
             {
                 btn19.BackColor = btnDran.BackColor;
-                button13.Enabled = false;
-                button13.BackColor = Color.Gray;
-                button13.Text = "voll";
+                btn40.Enabled = false;
+                btn40.BackColor = Color.Gray;
+                btn40.Text = "voll";
             }
             wechseln();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void btn41_Click(object sender, EventArgs e)
         {
             dran();
             if (btn30.BackColor != Color.Red && btn30.BackColor != Color.Yellow)
@@ -218,14 +247,14 @@ namespace connectFour6x7
             else if (btn25.BackColor != Color.Red && btn25.BackColor != Color.Yellow)
             {
                 btn25.BackColor = btnDran.BackColor;
-                button14.Enabled = false;
-                button14.BackColor = Color.Gray;
-                button14.Text = "voll";
+                btn41.Enabled = false;
+                btn41.BackColor = Color.Gray;
+                btn41.Text = "voll";
             }
             wechseln();
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void btn42_Click(object sender, EventArgs e)
         {
             dran();
             if (btn36.BackColor != Color.Red && btn36.BackColor != Color.Yellow)
@@ -251,9 +280,9 @@ namespace connectFour6x7
             else if (btn31.BackColor != Color.Red && btn31.BackColor != Color.Yellow)
             {
                 btn31.BackColor = btnDran.BackColor;
-                button15.Enabled = false;
-                button15.BackColor = Color.Gray;
-                button15.Text = "voll";
+                btn42.Enabled = false;
+                btn42.BackColor = Color.Gray;
+                btn42.Text = "voll";
             }
 
             wechseln();
