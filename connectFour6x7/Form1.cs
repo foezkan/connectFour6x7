@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace connectFour6x7
 {
-    
+
     public partial class Form1 : Form
     {
         int schalter = 0;
@@ -14,8 +14,38 @@ namespace connectFour6x7
         public Form1()
         {
             InitializeComponent();
-            
+
         }
+
+
+        //static int[,] board = new int[6, 6];
+        //int counter1 = 0;
+        //int counter2 = 0;
+
+        //void gewin2()
+        //{
+        //    for (int i = 0; i < 6; i++)
+        //    {
+        //        for (int j = 0; j < 6; j++)
+        //        {
+        //            if (counter1 < 4)
+        //            {
+        //                if (board[i, j] == 0)
+        //                {
+        //                    counter1++;
+        //                }
+
+        //                else { counter1 = 0; }
+
+
+        //            }
+        //            else { gewin(); }
+
+        //        }
+
+        //    }
+        //}
+
 
 
         void dran()
@@ -43,40 +73,175 @@ namespace connectFour6x7
             }
         }
 
-        void gewin()
-        {
-            if ( (btn6.BackColor == Color.Red && btn5.BackColor == Color.Red && btn4.BackColor == Color.Red && btn3.BackColor == Color.Red) ||
-                 (btn5.BackColor == Color.Red && btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red) ||
-                 (btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red && btn1.BackColor == Color.Red) ||
-                 (btn12.BackColor == Color.Red && btn11.BackColor == Color.Red && btn10.BackColor == Color.Red && btn9.BackColor == Color.Red))
-                {
+        //void ButtonWert()
+        //{
+        //    for (int i = 1; i <= 36; i++)
+        //    {
+        //        Button btn = this.Controls.Find("btn" + i, true)[0] as Button;
 
-                // Weiter
-                MessageBox.Show("Probe");
+        //        if(btn.BackColor == Color.Red)
+        //            btn.Text= "1";
+        //        if (btn.BackColor == Color.Yellow)
+        //            btn.Text = "0";
+        //    }
+        //}
+
+        void gewin()
+        {      //Vertikale
+            if ((btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red && btn1.BackColor == Color.Red) ||
+                (btn5.BackColor == Color.Red && btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red) ||
+                (btn6.BackColor == Color.Red && btn5.BackColor == Color.Red && btn4.BackColor == Color.Red && btn3.BackColor == Color.Red) ||
+                (btn10.BackColor == Color.Red && btn9.BackColor == Color.Red && btn8.BackColor == Color.Red && btn7.BackColor == Color.Red) ||
+                (btn11.BackColor == Color.Red && btn10.BackColor == Color.Red && btn9.BackColor == Color.Red && btn8.BackColor == Color.Red) ||
+                (btn12.BackColor == Color.Red && btn11.BackColor == Color.Red && btn10.BackColor == Color.Red && btn9.BackColor == Color.Red) ||
+                (btn16.BackColor == Color.Red && btn15.BackColor == Color.Red && btn14.BackColor == Color.Red && btn13.BackColor == Color.Red) ||
+                (btn17.BackColor == Color.Red && btn16.BackColor == Color.Red && btn15.BackColor == Color.Red && btn14.BackColor == Color.Red) ||
+                (btn18.BackColor == Color.Red && btn17.BackColor == Color.Red && btn16.BackColor == Color.Red && btn15.BackColor == Color.Red) ||
+                (btn22.BackColor == Color.Red && btn21.BackColor == Color.Red && btn20.BackColor == Color.Red && btn19.BackColor == Color.Red) ||
+                (btn23.BackColor == Color.Red && btn22.BackColor == Color.Red && btn21.BackColor == Color.Red && btn20.BackColor == Color.Red) ||
+                (btn24.BackColor == Color.Red && btn23.BackColor == Color.Red && btn22.BackColor == Color.Red && btn21.BackColor == Color.Red) ||
+                (btn28.BackColor == Color.Red && btn27.BackColor == Color.Red && btn26.BackColor == Color.Red && btn25.BackColor == Color.Red) ||
+                (btn29.BackColor == Color.Red && btn28.BackColor == Color.Red && btn27.BackColor == Color.Red && btn26.BackColor == Color.Red) ||
+                (btn30.BackColor == Color.Red && btn29.BackColor == Color.Red && btn28.BackColor == Color.Red && btn27.BackColor == Color.Red) ||
+                (btn34.BackColor == Color.Red && btn33.BackColor == Color.Red && btn32.BackColor == Color.Red && btn31.BackColor == Color.Red) ||
+                (btn35.BackColor == Color.Red && btn34.BackColor == Color.Red && btn33.BackColor == Color.Red && btn32.BackColor == Color.Red) ||
+                (btn36.BackColor == Color.Red && btn35.BackColor == Color.Red && btn34.BackColor == Color.Red && btn33.BackColor == Color.Red) ||
+                //horizontal
+                (btn1.BackColor == Color.Red && btn7.BackColor == Color.Red && btn13.BackColor == Color.Red && btn19.BackColor == Color.Red) ||
+                (btn2.BackColor == Color.Red && btn8.BackColor == Color.Red && btn14.BackColor == Color.Red && btn20.BackColor == Color.Red) ||
+                (btn3.BackColor == Color.Red && btn9.BackColor == Color.Red && btn15.BackColor == Color.Red && btn21.BackColor == Color.Red) ||
+                (btn4.BackColor == Color.Red && btn10.BackColor == Color.Red && btn16.BackColor == Color.Red && btn22.BackColor == Color.Red) ||
+                (btn5.BackColor == Color.Red && btn11.BackColor == Color.Red && btn17.BackColor == Color.Red && btn23.BackColor == Color.Red) ||
+                (btn6.BackColor == Color.Red && btn12.BackColor == Color.Red && btn18.BackColor == Color.Red && btn24.BackColor == Color.Red) ||
+                (btn7.BackColor == Color.Red && btn13.BackColor == Color.Red && btn19.BackColor == Color.Red && btn25.BackColor == Color.Red) ||
+                (btn8.BackColor == Color.Red && btn14.BackColor == Color.Red && btn20.BackColor == Color.Red && btn26.BackColor == Color.Red) ||
+                (btn9.BackColor == Color.Red && btn15.BackColor == Color.Red && btn21.BackColor == Color.Red && btn27.BackColor == Color.Red) ||
+                (btn10.BackColor == Color.Red && btn16.BackColor == Color.Red && btn22.BackColor == Color.Red && btn28.BackColor == Color.Red) ||
+                (btn11.BackColor == Color.Red && btn17.BackColor == Color.Red && btn23.BackColor == Color.Red && btn29.BackColor == Color.Red) ||
+                (btn12.BackColor == Color.Red && btn18.BackColor == Color.Red && btn24.BackColor == Color.Red && btn30.BackColor == Color.Red) ||
+                (btn13.BackColor == Color.Red && btn19.BackColor == Color.Red && btn25.BackColor == Color.Red && btn31.BackColor == Color.Red) ||
+                (btn14.BackColor == Color.Red && btn20.BackColor == Color.Red && btn26.BackColor == Color.Red && btn32.BackColor == Color.Red) ||
+                (btn15.BackColor == Color.Red && btn21.BackColor == Color.Red && btn27.BackColor == Color.Red && btn33.BackColor == Color.Red) ||
+                (btn16.BackColor == Color.Red && btn22.BackColor == Color.Red && btn28.BackColor == Color.Red && btn34.BackColor == Color.Red) ||
+                (btn17.BackColor == Color.Red && btn23.BackColor == Color.Red && btn29.BackColor == Color.Red && btn35.BackColor == Color.Red) ||
+                (btn18.BackColor == Color.Red && btn24.BackColor == Color.Red && btn30.BackColor == Color.Red && btn36.BackColor == Color.Red) ||
+                //Diagonale
+                (btn1.BackColor == Color.Red && btn8.BackColor == Color.Red && btn15.BackColor == Color.Red && btn22.BackColor == Color.Red) ||
+                (btn2.BackColor == Color.Red && btn9.BackColor == Color.Red && btn16.BackColor == Color.Red && btn23.BackColor == Color.Red) ||
+                (btn3.BackColor == Color.Red && btn10.BackColor == Color.Red && btn17.BackColor == Color.Red && btn24.BackColor == Color.Red) ||
+                (btn8.BackColor == Color.Red && btn15.BackColor == Color.Red && btn22.BackColor == Color.Red && btn29.BackColor == Color.Red) ||
+                (btn9.BackColor == Color.Red && btn16.BackColor == Color.Red && btn23.BackColor == Color.Red && btn30.BackColor == Color.Red) ||
+                (btn15.BackColor == Color.Red && btn22.BackColor == Color.Red && btn29.BackColor == Color.Red && btn36.BackColor == Color.Red) ||
+                (btn7.BackColor == Color.Red && btn14.BackColor == Color.Red && btn21.BackColor == Color.Red && btn28.BackColor == Color.Red) ||
+                (btn14.BackColor == Color.Red && btn21.BackColor == Color.Red && btn28.BackColor == Color.Red && btn35.BackColor == Color.Red) ||
+                (btn13.BackColor == Color.Red && btn20.BackColor == Color.Red && btn27.BackColor == Color.Red && btn34.BackColor == Color.Red) ||
+
+                (btn31.BackColor == Color.Red && btn26.BackColor == Color.Red && btn21.BackColor == Color.Red && btn16.BackColor == Color.Red) ||
+                (btn26.BackColor == Color.Red && btn21.BackColor == Color.Red && btn16.BackColor == Color.Red && btn11.BackColor == Color.Red) ||
+                (btn21.BackColor == Color.Red && btn16.BackColor == Color.Red && btn11.BackColor == Color.Red && btn6.BackColor == Color.Red) ||
+                (btn32.BackColor == Color.Red && btn27.BackColor == Color.Red && btn22.BackColor == Color.Red && btn17.BackColor == Color.Red) ||
+                (btn27.BackColor == Color.Red && btn22.BackColor == Color.Red && btn17.BackColor == Color.Red && btn12.BackColor == Color.Red) ||
+                (btn33.BackColor == Color.Red && btn28.BackColor == Color.Red && btn23.BackColor == Color.Red && btn18.BackColor == Color.Red) ||
+                (btn25.BackColor == Color.Red && btn20.BackColor == Color.Red && btn15.BackColor == Color.Red && btn10.BackColor == Color.Red) ||
+                (btn20.BackColor == Color.Red && btn15.BackColor == Color.Red && btn10.BackColor == Color.Red && btn5.BackColor == Color.Red) ||
+                (btn19.BackColor == Color.Red && btn14.BackColor == Color.Red && btn9.BackColor == Color.Red && btn4.BackColor == Color.Red))
+            {
+
+
+                MessageBox.Show("Rot hat gewonnen");
+
 
                 for (int i = 1; i <= 42; i++)
                 {
-                    Button btn = Controls.Find("btn" + i, true).FirstOrDefault() as Button;
-                    if (btn != null)
-                    {
-                        btn.BackColor = Color.White;
-                                            
-                    }
+                    Button btn = this.Controls.Find("btn" + i, true)[0] as Button;
+                    btn.BackColor = Color.White;
                 }
 
                 for (int i = 37; i <= 42; i++)
                 {
-                    Button btn = Controls.Find("btn" + i, true).FirstOrDefault() as Button;
-                    if (btn != null)
-                    {
-                       btn.Text = "+";
-                       btn.Enabled = true;
-                    }
+                    Button btn = this.Controls.Find("btn" + i, true)[0] as Button;
+                    btn.Text = "+";
+                    btn.Enabled = true;
+                }
+
+
+            }
+
+            if ((btn4.BackColor == Color.Yellow && btn3.BackColor == Color.Yellow && btn2.BackColor == Color.Yellow && btn1.BackColor == Color.Yellow) ||
+                (btn5.BackColor == Color.Yellow && btn4.BackColor == Color.Yellow && btn3.BackColor == Color.Yellow && btn2.BackColor == Color.Yellow) ||
+                (btn6.BackColor == Color.Yellow && btn5.BackColor == Color.Yellow && btn4.BackColor == Color.Yellow && btn3.BackColor == Color.Yellow) ||
+                (btn10.BackColor == Color.Yellow && btn9.BackColor == Color.Yellow && btn8.BackColor == Color.Yellow && btn7.BackColor == Color.Yellow) ||
+                (btn11.BackColor == Color.Yellow && btn10.BackColor == Color.Yellow && btn9.BackColor == Color.Yellow && btn8.BackColor == Color.Yellow) ||
+                (btn12.BackColor == Color.Yellow && btn11.BackColor == Color.Yellow && btn10.BackColor == Color.Yellow && btn9.BackColor == Color.Yellow) ||
+                (btn16.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn14.BackColor == Color.Yellow && btn13.BackColor == Color.Yellow) ||
+                (btn17.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn14.BackColor == Color.Yellow) ||
+                (btn18.BackColor == Color.Yellow && btn17.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow) ||
+                (btn22.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow && btn19.BackColor == Color.Yellow) ||
+                (btn23.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow) ||
+                (btn24.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow) ||
+                (btn28.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow && btn26.BackColor == Color.Yellow && btn25.BackColor == Color.Yellow) ||
+                (btn29.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow && btn26.BackColor == Color.Yellow) ||
+                (btn30.BackColor == Color.Yellow && btn29.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow) ||
+                (btn34.BackColor == Color.Yellow && btn33.BackColor == Color.Yellow && btn32.BackColor == Color.Yellow && btn31.BackColor == Color.Yellow) ||
+                (btn35.BackColor == Color.Yellow && btn34.BackColor == Color.Yellow && btn33.BackColor == Color.Yellow && btn32.BackColor == Color.Yellow) ||
+                (btn36.BackColor == Color.Yellow && btn35.BackColor == Color.Yellow && btn34.BackColor == Color.Yellow && btn33.BackColor == Color.Yellow) ||
+                //horizontal
+                (btn1.BackColor == Color.Yellow && btn7.BackColor == Color.Yellow && btn13.BackColor == Color.Yellow && btn19.BackColor == Color.Yellow) ||
+                (btn2.BackColor == Color.Yellow && btn8.BackColor == Color.Yellow && btn14.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow) ||
+                (btn3.BackColor == Color.Yellow && btn9.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow) ||
+                (btn4.BackColor == Color.Yellow && btn10.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow) ||
+                (btn5.BackColor == Color.Yellow && btn11.BackColor == Color.Yellow && btn17.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow) ||
+                (btn6.BackColor == Color.Yellow && btn12.BackColor == Color.Yellow && btn18.BackColor == Color.Yellow && btn24.BackColor == Color.Yellow) ||
+                (btn7.BackColor == Color.Yellow && btn13.BackColor == Color.Yellow && btn19.BackColor == Color.Yellow && btn25.BackColor == Color.Yellow) ||
+                (btn8.BackColor == Color.Yellow && btn14.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow && btn26.BackColor == Color.Yellow) ||
+                (btn9.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow) ||
+                (btn10.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow) ||
+                (btn11.BackColor == Color.Yellow && btn17.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow && btn29.BackColor == Color.Yellow) ||
+                (btn12.BackColor == Color.Yellow && btn18.BackColor == Color.Yellow && btn24.BackColor == Color.Yellow && btn30.BackColor == Color.Yellow) ||
+                (btn13.BackColor == Color.Yellow && btn19.BackColor == Color.Yellow && btn25.BackColor == Color.Yellow && btn31.BackColor == Color.Yellow) ||
+                (btn14.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow && btn26.BackColor == Color.Yellow && btn32.BackColor == Color.Yellow) ||
+                (btn15.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow && btn33.BackColor == Color.Yellow) ||
+                (btn16.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow && btn34.BackColor == Color.Yellow) ||
+                (btn17.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow && btn29.BackColor == Color.Yellow && btn35.BackColor == Color.Yellow) ||
+                (btn18.BackColor == Color.Yellow && btn24.BackColor == Color.Yellow && btn30.BackColor == Color.Yellow && btn36.BackColor == Color.Yellow) ||
+                //Diagonale
+                (btn1.BackColor == Color.Yellow && btn8.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow) ||
+                (btn2.BackColor == Color.Yellow && btn9.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow) ||
+                (btn3.BackColor == Color.Yellow && btn10.BackColor == Color.Yellow && btn17.BackColor == Color.Yellow && btn24.BackColor == Color.Yellow) ||
+                (btn8.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn29.BackColor == Color.Yellow) ||
+                (btn9.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow && btn30.BackColor == Color.Yellow) ||
+                (btn15.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn29.BackColor == Color.Yellow && btn36.BackColor == Color.Yellow) ||
+                (btn7.BackColor == Color.Yellow && btn14.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow) ||
+                (btn14.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow && btn35.BackColor == Color.Yellow) ||
+                (btn13.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow && btn34.BackColor == Color.Yellow) ||
+                (btn31.BackColor == Color.Yellow && btn26.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow) ||
+                (btn26.BackColor == Color.Yellow && btn21.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn11.BackColor == Color.Yellow) ||
+                (btn21.BackColor == Color.Yellow && btn16.BackColor == Color.Yellow && btn11.BackColor == Color.Yellow && btn6.BackColor == Color.Yellow) ||
+                (btn32.BackColor == Color.Yellow && btn27.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn17.BackColor == Color.Yellow) ||
+                (btn27.BackColor == Color.Yellow && btn22.BackColor == Color.Yellow && btn17.BackColor == Color.Yellow && btn12.BackColor == Color.Yellow) ||
+                (btn33.BackColor == Color.Yellow && btn28.BackColor == Color.Yellow && btn23.BackColor == Color.Yellow && btn18.BackColor == Color.Yellow) ||
+                (btn25.BackColor == Color.Yellow && btn20.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn10.BackColor == Color.Yellow) ||
+                (btn20.BackColor == Color.Yellow && btn15.BackColor == Color.Yellow && btn10.BackColor == Color.Yellow && btn5.BackColor == Color.Yellow) ||
+                (btn19.BackColor == Color.Yellow && btn14.BackColor == Color.Yellow && btn9.BackColor == Color.Yellow && btn4.BackColor == Color.Yellow))
+            {
+
+                MessageBox.Show("Gelb hat gewonnen");
+
+                for (int i = 1; i <= 42; i++)
+                {
+                    Button btn = this.Controls.Find("btn" + i, true)[0] as Button;
+                    btn.BackColor = Color.White;
+                }
+
+                for (int i = 37; i <= 42; i++)
+                {
+                    Button btn = this.Controls.Find("btn" + i, true)[0] as Button;
+                    btn.Text = "+";
+                    btn.Enabled = true;
                 }
 
             }
-            
-            
+
         }
 
         private void btn37_Click_1(object sender, EventArgs e)
@@ -114,14 +279,17 @@ namespace connectFour6x7
                 btn37.BackColor = Color.Gray;
                 btn37.Text = "voll";
             }
+
+
             gewin();
             wechseln();
+            //ButtonWert();
         }
 
         private void btn38_Click(object sender, EventArgs e)
         {
             dran();
-            
+
             if (btn12.BackColor != Color.Red && btn12.BackColor != Color.Yellow)
             {
                 btn12.BackColor = btnDran.BackColor;
@@ -151,9 +319,10 @@ namespace connectFour6x7
             }
             gewin();
             wechseln();
+            //ButtonWert();
         }
 
-       
+
 
         private void btn39_Click(object sender, EventArgs e)
         {
@@ -186,6 +355,8 @@ namespace connectFour6x7
                 btn39.Text = "voll";
             }
             wechseln();
+            gewin();
+
         }
 
         private void btn40_Click(object sender, EventArgs e)
@@ -219,6 +390,7 @@ namespace connectFour6x7
                 btn40.Text = "voll";
             }
             wechseln();
+            gewin();
         }
 
         private void btn41_Click(object sender, EventArgs e)
@@ -252,6 +424,7 @@ namespace connectFour6x7
                 btn41.Text = "voll";
             }
             wechseln();
+            gewin();
         }
 
         private void btn42_Click(object sender, EventArgs e)
@@ -286,7 +459,7 @@ namespace connectFour6x7
             }
 
             wechseln();
-
+            gewin();
         }
 
 
