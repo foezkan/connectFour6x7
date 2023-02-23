@@ -474,6 +474,7 @@ namespace connectFour6x7
                 btn42.Enabled = false;
                 btn42.BackColor = Color.Gray;
                 btn42.Text = "voll";
+
             }
 
             wechseln();
