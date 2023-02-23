@@ -18,52 +18,52 @@ namespace connectFour6x7
         }
 
 
-        static int[,] board = new int[6, 6];
-        int counter1 = 0;
-        int counter2 = 0;
+        //static int[,] board = new int[6, 6];
+        //int counter1 = 0;
+        //int counter2 = 0;
 
-        void gewin2()
-        {
-            for (int i = 0; i < 6; i++)
-            {
-                for (int j = 0; j < 6; j++)
-                {
-                    if (counter1 < 4)
-                    {
-                        if (board[i, j] == 0)
-                        {
-                            counter1++;
-                        }
+        //void gewin2()
+        //{
+        //    for (int i = 0; i < 6; i++)
+        //    {
+        //        for (int j = 0; j < 6; j++)
+        //        {
+        //            if (counter1 < 4)
+        //            {
+        //                if (board[i, j] == 0)
+        //                {
+        //                    counter1++;
+        //                }
 
-                        else { counter1 = 0; }
+        //                else { counter1 = 0; }
 
 
-                    }
-                    else { GelbGewin(); }
+        //            }
+        //            else { GelbGewin(); }
 
                    
-                    if (counter2 <4)
-                    {
-                        if (board[i, j] == 1) 
-                        {
-                        counter2++;
-                        }
+        //            if (counter2 <4)
+        //            {
+        //                if (board[i, j] == 1) 
+        //                {
+        //                counter2++;
+        //                }
                     
-                        else { counter2 = 0; }
-                    }
-                    else { RotGewin(); }
+        //                else { counter2 = 0; }
+        //            }
+        //            else { RotGewin(); }
 
-                }
+        //        }
 
-            }
-        }
+        //    }
+        //}
 
 
-        void GelbGewin()
-        { }
+        //void GelbGewin()
+        //{ }
 
-        void RotGewin()
-        { }
+        //void RotGewin()
+        //{ }
 
 
         void dran()
