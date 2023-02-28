@@ -16,55 +16,6 @@ namespace connectFour6x7
             InitializeComponent();
         }
 
-        //6x6
-
-        //static int[,] board = new int[6,6];
-        //int counter1 = 0;
-        //int counter2 = 0 ; 
-
-        //void gewin2()
-        //{
-        //    for (int i = 0; i < 6; i++)
-        //    {
-        //        for (int j = 0; j < 6; j++)
-        //        {
-        //            if (counter1 < 4)
-        //            {
-        //                if (board[i, j] == 0)
-        //                {
-        //                    counter1++;
-        //                }
-
-        //                else { counter1 = 0; }
-
-
-        //            }
-        //            else { GelbGewin(); }
-
-                   
-        //            if (counter2 <4)
-        //            {
-        //                if (board[i, j] == 1) 
-        //                {
-        //                counter2++;
-        //                }
-                    
-        //                else { counter2 = 0; }
-        //            }
-        //            else { RotGewin(); }
-
-        //        }
-
-        //    }
-        //}
-
-
-        //void GelbGewin()
-        //{ }
-
-        //void RotGewin()
-        //{ }
-
 
         void dran()
         {
@@ -91,19 +42,7 @@ namespace connectFour6x7
             }
         }
 
-        //void ButtonWert()
-        //{
-        //    for (int i = 1; i <= 36; i++)
-        //    {
-        //        Button btn = this.Controls.Find("btn" + i, true)[0] as Button;
-
-        //        if(btn.BackColor == Color.Red)
-        //            btn.Text= "1";
-        //        if (btn.BackColor == Color.Yellow)
-        //            btn.Text = "0";
-        //    }
-        //}
-
+        
         void gewin()
         {      //Vertikale
             if ((btn4.BackColor == Color.Red && btn3.BackColor == Color.Red && btn2.BackColor == Color.Red && btn1.BackColor == Color.Red) ||
@@ -180,7 +119,6 @@ namespace connectFour6x7
                     btn.Text = "+";
                     btn.Enabled = true;
                 }
-
 
             }
 
@@ -300,7 +238,7 @@ namespace connectFour6x7
 
             gewin();
             wechseln();
-            //ButtonWert();
+           
         }
 
         private void btn38_Click(object sender, EventArgs e)
@@ -336,10 +274,8 @@ namespace connectFour6x7
             }
             gewin();
             wechseln();
-            //ButtonWert();
+            
         }
-
-
 
         private void btn39_Click(object sender, EventArgs e)
         {

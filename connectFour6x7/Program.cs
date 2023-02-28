@@ -8,6 +8,7 @@ namespace connectFour6x7
 {
     internal static class Program
     {
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>

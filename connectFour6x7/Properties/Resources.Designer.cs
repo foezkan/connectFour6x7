@@ -34,6 +34,7 @@ namespace connectFour6x7.Properties
         {
         }
 
+
         /// <summary>
         ///   Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
         /// </summary>
